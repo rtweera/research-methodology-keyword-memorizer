@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Keyword Memorization App
+
+A Next.js application for memorizing keywords organized by subject modules using drag-and-drop functionality.
+
+## Features
+
+- **Edit Mode**: Create keywords and lesson baskets, organize them by dragging and dropping
+- **Play Mode**: Test your memory by dragging keywords to their correct baskets
+- **File Management**: Save and load different subjects as JSON files
+- **Progress Tracking**: Track mistakes and completion status
+- **Responsive Design**: Works on desktop and mobile devices
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server with Turbopack:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Code Quality
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses Biome for linting and formatting:
 
-## Learn More
+```bash
+# Check and fix linting issues
+npm run lint
+npm run lint:fix
 
-To learn more about Next.js, take a look at the following resources:
+# Format code
+npm run format
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Check and fix both linting and formatting
+npm run check
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How to Use
 
-## Deploy on Vercel
+1. **Setup**: Add keywords using the "Add" button and create lesson baskets
+2. **Organize**: Drag keywords from the pool to their appropriate baskets
+3. **Study**: Click "Play Mode" to test your memory
+4. **Save**: Export your work as a JSON file for later use
+5. **Load**: Import previously saved subjects
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/page.js` - Main application component
+- `src/app/layout.js` - Root layout with metadata
+- `src/app/globals.css` - Global styles and Tailwind imports
+- `biome.json` - Biome configuration for linting and formatting
+- Configuration files for Next.js, Tailwind, and PostCSS
+
+```bash
+npx create-next-app@latest keyword-memorization-app --no-typescript --tailwind --src-dir --app --turbo --no-import-alias
+```
+
+## Installation Instructions
+
+1. Run `npx create-next-app@latest keyword-memorization-app --no-typescript --tailwind --src-dir --app --turbo --no-import-alias`
+
+2. Replace the generated files with the code above
+
+3. Install the lucide-react dependency:
+
+   ```bash
+   npm install lucide-react
+   ```
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+This gives you a complete Next.js project matching your specifications:
+
+- ✅ No TypeScript
+- ✅ Tailwind CSS enabled
+- ✅ src/ directory enabled
+- ✅ App Router enabled
+- ✅ Turbopack enabled
+- ✅ No custom import aliases
+- ✅ All functionality preserved from the original React app
